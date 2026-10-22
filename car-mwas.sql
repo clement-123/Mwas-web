@@ -1,5 +1,10 @@
+IF DB_ID(N'car-mwas') IS NULL
+BEGIN
 CREATE DATABASE [car-mwas];
+END
+GO
 USE [car-mwas];
+GO
 
 IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='cars' AND xtype='U')
 BEGIN
